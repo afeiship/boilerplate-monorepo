@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate-monorepo",
+  "name": "@boilerplate-scope/boilerplate-monorepo",
   "private": true,
   "workspaces": {
     "packages": [
