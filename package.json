@@ -10,8 +10,10 @@
     "lerna": "^3.22.1"
   },
   "scripts": {
-    "start": "cd ./packages/sites && yarn start",
-    "build": "lerna run build --since master",
-    "publish": "npm run build && lerna publish"
+    "start": "cd ./packages/websites && yarn start",
+    "lerna:clean": "lerna clean",
+    "lerna:bootstrap": "lerna bootstrap",
+    "build": "lerna run build --since master --no-private",
+    "publish": "npm run build && lerna publish --no-private"
   }
 }
