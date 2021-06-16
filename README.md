@@ -1,2 +1,2 @@
 # boilerplate-monorepo
-> boilerplate-monorepo-description.
+> boilerplate-monorepo-description
