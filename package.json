@@ -17,10 +17,10 @@
     "build": "lerna run build --since master --no-private",
     "publish": "npm run build && lerna publish --no-private"
   },
-  "boilerplate": "@boilerplate-scope/boilerplate-monorepo",
+  "boilerplate": "boilerplate-monorepo",
   "homepage": "https://js.work",
   "repository": {
     "type": "git",
-    "url": "https://github.com/afeiship/@boilerplate-scope/boilerplate-monorepo"
+    "url": "https://github.com/afeiship/boilerplate-monorepo.git"
   }
 }
