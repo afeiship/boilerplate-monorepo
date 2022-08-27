@@ -3,6 +3,7 @@
 
 ## installation
 ```shell
+brew install youtube-dl
 brew install afeiship/jswork/ytbdown
 ```
 
