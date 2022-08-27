@@ -1,5 +1,5 @@
 {
-  "name": "ytbdown",
+  "name": "@jswork/ytbdown",
   "version": "0.0.2",
   "description": "Youtube download based on youtube-dl.",
   "main": "index.js",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/afeiship/ytbdown/issues"
   },
-  "homepage": "https://github.com/afeiship/ytbdown#readme"
+  "homepage": "https://github.com/afeiship/ytbdown#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
