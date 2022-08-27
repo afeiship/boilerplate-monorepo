@@ -44,5 +44,5 @@ func YtbMp4(url string) {
 }
 
 func YtbMp3(url string) {
-	YtbExecute(url, "-o", "%(title)s.%(ext)s", "-f", "bestaudio --extract-audio mp3")
+	YtbExecute(url, "--extract-audio", "--audio-format", "mp3", "--audio-quality", "0")
 }
