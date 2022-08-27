@@ -36,7 +36,10 @@ func YtbExecute(args ...string) {
 		log.Fatal("failed to capture stdout or stderr\n")
 	}
 	outStr, errStr := string(stdoutBuf.Bytes()), string(stderrBuf.Bytes())
-	fmt.Printf("\nout:\n%s\nerr:\n%s\n", outStr, errStr)
+	if errStr != "" {
+		fmt.Printf("💥ERROR: %s", errStr)
+	}
+	fmt.Printf("🌈out: %s", outStr)
 }
 
 func YtbMp4(url string) {

@@ -4,7 +4,6 @@ Copyright © 2022 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
-	"fmt"
 	"os"
 	"ytbdown/misc"
 
@@ -22,13 +21,11 @@ var rootCmd = &cobra.Command{
 		isMp3, _ := cmd.Flags().GetBool("mp3")
 		isMp4, _ := cmd.Flags().GetBool("mp4")
 
-		fmt.Println(srcUrl, isMp3, isMp4)
-
-		if (isMp3) {
+		if isMp3 {
 			misc.YtbMp3(srcUrl)
 		}
 
-		if (isMp4) {
+		if isMp4 {
 			misc.YtbMp4(srcUrl)
 		}
 	},
