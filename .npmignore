@@ -1,0 +1,10 @@
+*.go
+go.*
+.idea
+.goreleaser.yaml
+artifacts.json
+CHANGELOG.md
+checksums.txt
+config.yaml
+metadata.json
+ytbdown

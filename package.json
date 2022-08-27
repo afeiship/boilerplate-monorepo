@@ -1,0 +1,20 @@
+{
+  "name": "ytbdown",
+  "version": "0.0.2",
+  "description": "Youtube download based on youtube-dl.",
+  "main": "index.js",
+  "scripts": {
+    "build": "goreleaser --rm-dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeiship/ytbdown.git"
+  },
+  "keywords": [],
+  "author": "afeiship",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afeiship/ytbdown/issues"
+  },
+  "homepage": "https://github.com/afeiship/ytbdown#readme"
+}
