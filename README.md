@@ -17,5 +17,6 @@ brew install afeiship/jswork/ytbdown
 $ ytbdown -3 https://www.youtube.com/watch?v=BTfqMWSsrOY
 # download mp4
 $ ytbdown -4 https://www.youtube.com/watch?v=BTfqMWSsrOY
-
+# download bilibili video
+$ ytbdown -4 https://www.bilibili.com/video/xxxxID
 ```
