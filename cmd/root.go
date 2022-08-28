@@ -1,9 +1,8 @@
-/*
-Copyright © 2022 NAME HERE <EMAIL ADDRESS>
-*/
 package cmd
 
 import (
+	"fmt"
+	"github.com/afeiship/nx"
 	"os"
 	"ytbdown/misc"
 
@@ -13,21 +12,26 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "ytbdown",
-	Short: "Download mp3/mp4 by youtube-dl.",
+	Short: "Download mp3/mp4 by youtube-dl/yt-dlp.",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
+		var mpx any
 		srcUrl := args[0]
 		isMp3, _ := cmd.Flags().GetBool("mp3")
 		isMp4, _ := cmd.Flags().GetBool("mp4")
+		isKeep, _ := cmd.Flags().GetBool("keep")
 
 		if isMp3 {
-			misc.YtbMp3(srcUrl)
+			mpx = nx.If(isMp3, "mp3", nil)
 		}
 
 		if isMp4 {
-			misc.YtbMp4(srcUrl)
+			mpx = nx.If(isMp4, "mp4", nil)
 		}
+
+		mps := fmt.Sprintf("%v", mpx)
+		misc.YtbMpx(mps, srcUrl, isKeep)
 	},
 }
 
@@ -41,14 +45,9 @@ func Execute() {
 }
 
 func init() {
-	// Here you will define your flags and configuration settings.
-	// Cobra supports persistent flags, which, if defined here,
-	// will be global for your application.
-
-	// rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.ytbdown.yaml)")
-
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("mp3", "3", false, "Download mp3 music.")
 	rootCmd.Flags().BoolP("mp4", "4", false, "Download mp4 video.")
+	rootCmd.Flags().BoolP("keep", "k", false, "Download mpx keep original file.")
 }

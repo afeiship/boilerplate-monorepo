@@ -1,3 +1,5 @@
+github.com/afeiship/nx v0.0.0-20220824131816-1aecfc6d270a h1:9kwpG+wcUtyWDeMI6ohb4qUZ2pnkFstT2EtADV3N9NI=
+github.com/afeiship/nx v0.0.0-20220824131816-1aecfc6d270a/go.mod h1:rT2xxQ/yR2eghb+l+1FsP5yzV5IMG4Wmf3/z7op1/NM=
 github.com/cpuguy83/go-md2man/v2 v2.0.2/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/inconshreveable/mousetrap v1.0.0/go.mod h1:PxqpIevigyE2G7u3NXJIT2ANytuPF1OarO4DADm73n8=
 github.com/inconshreveable/mousetrap v1.0.1 h1:U3uMjPSQEBMNp1lFxmllqCPM6P5u/Xq7Pgzkat/bFNc=

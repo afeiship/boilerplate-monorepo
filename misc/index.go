@@ -12,7 +12,8 @@ import (
 func YtbExecute(args ...string) {
 	var stdoutBuf, stderrBuf bytes.Buffer
 	var errStdout, errStderr error
-	cmd := exec.Command("youtube-dl", args...)
+	cmd := exec.Command("yt-dlp", args...)
+	fmt.Println("[🐠]: ", cmd)
 	stdoutIn, _ := cmd.StdoutPipe()
 	stderrIn, _ := cmd.StderrPipe()
 
@@ -42,10 +43,19 @@ func YtbExecute(args ...string) {
 	fmt.Printf("🌈out: %s", outStr)
 }
 
-func YtbMp4(url string) {
-	YtbExecute(url, "-o", "%(title)s.%(ext)s", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio")
-}
+func YtbMpx(mpx, url string, keep bool) {
+	var args = []string{url}
+	if keep {
+		args = append(args, "-k")
+	}
 
-func YtbMp3(url string) {
-	YtbExecute(url, "--extract-audio", "--audio-format", "mp3", "--audio-quality", "0")
+	if mpx == "mp4" {
+		args = append(args, "-o", "%(title)s.%(ext)s", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio")
+	}
+
+	if mpx == "mp3" {
+		args = append(args, "--extract-audio", "--audio-format", "mp3", "--audio-quality", "0")
+	}
+
+	YtbExecute(args...)
 }
