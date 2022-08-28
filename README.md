@@ -3,7 +3,11 @@
 
 ## installation
 ```shell
-brew install youtube-dl
+# 安装 yt-dlp
+pip install yt-dlp
+# 或者用 brew 安装
+brew install yt-dlp/taps/yt-dlp
+brew install afeiship/jswork/ffmpeg
 brew install afeiship/jswork/ytbdown
 ```
 
@@ -13,4 +17,5 @@ brew install afeiship/jswork/ytbdown
 $ ytbdown -3 https://www.youtube.com/watch?v=BTfqMWSsrOY
 # download mp4
 $ ytbdown -4 https://www.youtube.com/watch?v=BTfqMWSsrOY
+
 ```
