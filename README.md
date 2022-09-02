@@ -28,3 +28,17 @@ $ ytbdown -4 https://www.youtube.com/watch?v=BTfqMWSsrOY
 # download bilibili video
 $ ytbdown -4 https://www.bilibili.com/video/xxxxID
 ```
+
+```conf
+Download mp3/mp4 by youtube-dl/yt-dlp.
+
+Usage:
+  ytbdown [flags]
+
+Flags:
+  -h, --help          help for ytbdown
+  -k, --keep          Download mpx keep original file.
+  -3, --mp3           Download mp3 music.
+  -4, --mp4           Download mp4 video.
+  -n, --name string   Download filename. (default "%(title)s")
+```
