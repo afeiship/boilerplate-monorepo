@@ -1,6 +1,6 @@
 {
   "name": "@jswork/ytbdown",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Youtube download based on youtube-dl.",
   "main": "index.js",
   "scripts": {

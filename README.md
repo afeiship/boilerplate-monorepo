@@ -15,6 +15,7 @@ brew install afeiship/jswork/ytbdown
 ```shell
 # download mp3
 $ ytbdown -3 https://www.youtube.com/watch?v=BTfqMWSsrOY
+$ ytbdown -3 https://www.youtube.com/watch?v=k2dGdKug7xY -n 周深-起風了
 # download mp4
 $ ytbdown -4 https://www.youtube.com/watch?v=BTfqMWSsrOY
 # download bilibili video

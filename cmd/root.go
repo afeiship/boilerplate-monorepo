@@ -21,6 +21,7 @@ var rootCmd = &cobra.Command{
 		isMp3, _ := cmd.Flags().GetBool("mp3")
 		isMp4, _ := cmd.Flags().GetBool("mp4")
 		isKeep, _ := cmd.Flags().GetBool("keep")
+		name, _ := cmd.Flags().GetString("name")
 
 		if isMp3 {
 			mpx = nx.If(isMp3, "mp3", nil)
@@ -31,7 +32,7 @@ var rootCmd = &cobra.Command{
 		}
 
 		mps := fmt.Sprintf("%v", mpx)
-		misc.YtbMpx(mps, srcUrl, isKeep)
+		misc.YtbMpx(mps, srcUrl, isKeep, name)
 	},
 }
 
@@ -47,6 +48,7 @@ func Execute() {
 func init() {
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
+	rootCmd.Flags().StringP("name", "n", "%(title)s", "Download filename.")
 	rootCmd.Flags().BoolP("mp3", "3", false, "Download mp3 music.")
 	rootCmd.Flags().BoolP("mp4", "4", false, "Download mp4 video.")
 	rootCmd.Flags().BoolP("keep", "k", false, "Download mpx keep original file.")

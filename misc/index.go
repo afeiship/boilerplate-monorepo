@@ -43,18 +43,19 @@ func YtbExecute(args ...string) {
 	fmt.Printf("🌈out: %s", outStr)
 }
 
-func YtbMpx(mpx, url string, keep bool) {
+func YtbMpx(mpx, url string, keep bool, name string) {
 	var args = []string{url}
+	var output = fmt.Sprintf("%s.(ext)s", name)
 	if keep {
 		args = append(args, "-k")
 	}
 
 	if mpx == "mp4" {
-		args = append(args, "-o", "%(title)s.%(ext)s", "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio")
+		args = append(args, "-o", output, "-f", "bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio")
 	}
 
 	if mpx == "mp3" {
-		args = append(args, "--extract-audio", "--audio-format", "mp3", "--audio-quality", "0")
+		args = append(args, "-o", output, "--extract-audio", "--audio-format", "mp3", "--audio-quality", "0")
 	}
 
 	YtbExecute(args...)
