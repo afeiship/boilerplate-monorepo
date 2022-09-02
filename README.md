@@ -11,6 +11,13 @@ brew install afeiship/jswork/ffmpeg
 brew install afeiship/jswork/ytbdown
 ```
 
+## update
+```shell
+cd /usr/local/Homebrew/Library/Taps/afeiship
+rm -rf homebrew-jswork/
+brew reinstall ytbdown
+```
+
 ## usage
 ```shell
 # download mp3
