@@ -44,8 +44,9 @@ func YtbExecute(args ...string) {
 }
 
 func YtbMpx(mpx, url string, keep bool, name string) {
-	var args = []string{url}
-	var output = fmt.Sprintf("%s.(ext)s", name)
+	var args = []string{TidyUrl(url)}
+	var output = fmt.Sprintf("%s.(ext)s", TidyName(name))
+
 	if keep {
 		args = append(args, "-k")
 	}
