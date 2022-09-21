@@ -4,6 +4,7 @@
   "description": "Youtube download based on youtube-dl.",
   "main": "index.js",
   "scripts": {
+    "dev": "air",
     "build": "goreleaser --rm-dist"
   },
   "repository": {
